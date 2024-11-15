@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { ApolloProvider } from "@apollo/client";
-import App from "@/App";
+import { App } from "@/components/app";
 import { client } from "@/api/apollo";
 
 createRoot(document.getElementById("root")!).render(

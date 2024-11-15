@@ -1,5 +1,5 @@
 import { FC } from "react";
 
-export const Film: FC = () => {
+export const Layout: FC = () => {
   return <>Film</>;
 };
