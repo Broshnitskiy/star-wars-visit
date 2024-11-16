@@ -8,7 +8,7 @@ import { IActionButtonsProps } from "./action-buttons.types";
  * Renders buttons for navigating back to the films list and adding a film to favorites.
  *
  * @param openModal
- * @returns
+ * @returns {JSX.Element}
  */
 
 export const ActionButtons: FC<IActionButtonsProps> = ({ openModal }) => {
