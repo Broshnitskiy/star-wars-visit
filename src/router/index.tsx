@@ -37,6 +37,7 @@ const routes = [
 ];
 
 export const router = createBrowserRouter(routes, {
+  basename: "star-wars-visit",
   future: {
     v7_relativeSplatPath: true,
     v7_fetcherPersist: true,
