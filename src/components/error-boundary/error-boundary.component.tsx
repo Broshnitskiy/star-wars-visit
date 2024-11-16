@@ -1,3 +1,4 @@
+import { Button } from "@headlessui/react";
 import { FC } from "react";
 import { useRouteError } from "react-router-dom";
 
@@ -16,9 +17,9 @@ export const ErrorBoundary: FC = () => {
     <div>
       <h1>Uh oh, something went terribly wrong 😩</h1>
       <pre>{error.message || JSON.stringify(error)}</pre>
-      <button onClick={() => (window.location.href = "/")}>
+      <Button onClick={() => (window.location.href = "/")}>
         Click here to reload the app
-      </button>
+      </Button>
     </div>
   );
 };
