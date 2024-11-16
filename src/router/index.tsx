@@ -18,7 +18,7 @@ const routes: RouteObject[] = [
         errorElement: <ErrorBoundary />,
       },
       {
-        path: "film/:id",
+        path: "/film/:id",
         HydrateFallback: Fallback,
         errorElement: <ErrorBoundary />,
         async lazy() {
