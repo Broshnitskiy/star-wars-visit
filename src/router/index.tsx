@@ -1,6 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Home } from "@/pages/home";
 import { Layout } from "@/components/layout/layout.component";
+import { filmsLoader } from "./loaders/films-loader";
+import { ErrorBoundary } from "@/components/error-boundary";
+import { Fallback } from "@/components/fallback";
 
 const routes = [
   {
@@ -10,15 +13,18 @@ const routes = [
       {
         element: <Home />,
         index: true,
-        loader: () => ({ message: "Hello Data Router!" }),
+        loader: filmsLoader,
+        HydrateFallback: Fallback,
+        errorElement: <ErrorBoundary />,
       },
       {
-        path: "film/:filmId",
+        path: "film/:id",
+        HydrateFallback: Fallback,
+        errorElement: <ErrorBoundary />,
         async lazy() {
-          const { Film } = await import("../pages/film");
+          const { FilmPage } = await import("../pages/film");
           return {
-            // loader: dashboardMessagesLoader,
-            Component: Film,
+            Component: FilmPage,
           };
         },
       },
