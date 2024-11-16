@@ -1,3 +1,20 @@
+/**
+ * Modal component for confirming actions.
+ *
+ * This component displays a modal dialog for confirming the addition of a film to favorites.
+ * It uses Headless UI's Dialog for accessibility and TailwindCSS for styling.
+ *
+ * @param {IModalProps} props - Props passed to the Modal component.
+ * @param {boolean} props.isOpen - Controls the visibility of the modal.
+ * @param {() => void} props.closeModal - Callback function to close the modal.
+ * @param {string} props.filmTitle - Title of the film being added to favorites.
+ *
+ * @returns {JSX.Element} The rendered Modal component.
+ *
+ * @author Roman Bro
+ * @category Components
+ */
+
 import { FC } from "react";
 
 import {
