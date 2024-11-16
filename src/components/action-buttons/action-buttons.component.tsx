@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@headlessui/react";
 import { IActionButtonsProps } from "./action-buttons.types";
 
+/**
+ * ActionButtons Component
+ * Renders buttons for navigating back to the films list and adding a film to favorites.
+ *
+ * @param openModal
+ * @returns
+ */
+
 export const ActionButtons: FC<IActionButtonsProps> = ({ openModal }) => {
   return (
     <div className="mt-8 flex justify-center gap-4">

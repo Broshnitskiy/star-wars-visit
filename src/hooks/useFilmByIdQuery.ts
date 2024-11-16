@@ -17,6 +17,15 @@ interface UseFilmByIdQueryResult {
   error: ApolloError | undefined;
 }
 
+/**
+ * Custom hook to fetch a film by its ID.
+ *
+ * This hook fetches data about a specific film using its unique ID.
+ *
+ * @param {string} id - The unique identifier of the film.
+ * @returns {UseFilmByIdQueryResult} An object containing `loading`, `error`, and `film`.
+ */
+
 export const useFilmByIdQuery = (id: string): UseFilmByIdQueryResult => {
   const { data, loading, error } = useQuery(GET_FILM_BY_ID, {
     variables: { id },

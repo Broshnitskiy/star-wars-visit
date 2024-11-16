@@ -1,6 +1,14 @@
 import { FC } from "react";
 import { useRouteError } from "react-router-dom";
 
+/**
+ * ErrorBoundary Component
+ *
+ * A boundary to catch and display errors encountered during routing.
+ *
+ * @returns {JSX.Element}
+ */
+
 export const ErrorBoundary: FC = () => {
   const error = useRouteError() as Error;
 

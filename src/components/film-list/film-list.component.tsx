@@ -4,6 +4,24 @@ import { IFilmListProps } from "./film-list.types";
 
 const tableTitles = ["Title", "Episode ID", "Director", "Release Date"];
 
+/**
+ * Component FilmList
+ *
+ * @param {IFilmListProps} props
+ * @returns {JSX.Element}
+ *
+ * @example
+ * const films = [
+ *   { id: "1", title: "A New Hope", episodeID: 4, director: "George Lucas", releaseDate: "1977-05-25" },
+ *   { id: "2", title: "The Empire Strikes Back", episodeID: 5, director: "Irvin Kershner", releaseDate: "1980-05-21" }
+ * ];
+ *
+ * <FilmList films={films} />
+ *
+ * @category Components
+ * @author Roman Bro
+ */
+
 export const FilmList: FC<IFilmListProps> = ({ films }) => {
   const navigate = useNavigate();
 

@@ -1,6 +1,16 @@
 import { FC } from "react";
 import { IFilmCardProps } from "./film-card.types";
 
+/**
+ * FilmCard Component
+ *
+ * Displays detailed information about a specific film, including its director,
+ * release date, producers, and the iconic opening crawl text.
+ *
+ * @param {IFilmCardProps} props
+ * @returns {JSX.Element}
+ */
+
 export const FilmCard: FC<IFilmCardProps> = ({ film }) => {
   const { director, releaseDate, producers, openingCrawl } = film;
 

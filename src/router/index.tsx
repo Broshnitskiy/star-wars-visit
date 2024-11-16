@@ -1,11 +1,11 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
 import { Home } from "@/pages/home";
 import { Layout } from "@/components/layout/layout.component";
 import { filmsLoader } from "./loaders/films-loader";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { Fallback } from "@/components/fallback";
 
-const routes = [
+const routes: RouteObject[] = [
   {
     path: "/",
     element: <Layout />,

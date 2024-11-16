@@ -1,22 +1,4 @@
-/**
- * Modal component for confirming actions.
- *
- * This component displays a modal dialog for confirming the addition of a film to favorites.
- * It uses Headless UI's Dialog for accessibility and TailwindCSS for styling.
- *
- * @param {IModalProps} props - Props passed to the Modal component.
- * @param {boolean} props.isOpen - Controls the visibility of the modal.
- * @param {() => void} props.closeModal - Callback function to close the modal.
- * @param {string} props.filmTitle - Title of the film being added to favorites.
- *
- * @returns {JSX.Element} The rendered Modal component.
- *
- * @author Roman Bro
- * @category Components
- */
-
 import { FC } from "react";
-
 import {
   Description,
   Dialog,
@@ -26,6 +8,23 @@ import {
 } from "@headlessui/react";
 import toast from "react-hot-toast";
 import { IModalProps } from "./modal.types";
+
+/**
+ * Modal component for confirming actions.
+ *
+ * This component displays a modal dialog for confirming the addition of a film to favorites.
+ * It uses Headless UI's Dialog for accessibility and TailwindCSS for styling.
+ *
+ * @param {IModalProps} props
+ * @param {boolean} props.isOpen
+ * @param {() => void} props.closeModal
+ * @param {string} props.filmTitle
+ *
+ * @returns {JSX.Element}
+ *
+ * @author Roman Bro
+ * @category Components
+ */
 
 export const Modal: FC<IModalProps> = ({ closeModal, isOpen, filmTitle }) => {
   return (

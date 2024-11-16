@@ -1,6 +1,21 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * Header Component
+ *
+ * This component represents the top navigation bar of the application. It includes:
+ * - A logo that links to the homepage.
+ * - Navigation links for "Home", "About", and "Contact" pages.
+ *
+ * The header uses Tailwind CSS for styling.
+ *
+ * @returns {JSX.Element}
+ *
+ * @author Roman Bro
+ * @category Components
+ */
+
 export const Header: FC = () => {
   return (
     <header className="bg-blue-600 text-white shadow-lg">
